@@ -1,13 +1,36 @@
 <template>
-    <div class="container slds-is-relative">
-        <lightning-combobox label="Tipo"
-        options={tipoValues} value={tipo}
-        ></lightning-combobox>
-        <lightning-combobox label="Tipo de Conta"
-        options={tipoContaValues} value={tipoConta}
-        ></lightning-combobox>
-        <lightning-input label="Nome" value={nome} data-field="Nome" onchange={handleChange} class="slds-m-bottom_x-small" required></lightning-input>
-        <lightning-input label="Numero da conta" value={numeroConta} data-field="Número da Conta" onchange={handleChange} class="slds-m-bottom_x-small" required></lightning-input>
-        <lightning-button label="Atualiza conta" variant="brand" onclick={updateAccount} disabled={disabled}></lightning-button>
-    </div>
+    <lightning-layout multiple-rows="false" horizontal-align="center">
+        <div class="spinner">
+            <template if:true={isLoading}>
+                    <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                    </lightning-spinner>
+            </template>
+        </div>
+        <lightning-layout-item multiple-rows="true" horizontal-align="center" size="12">
+            <lightning-card title="Atualização rápida" size="12">
+                <lightning-layout multiple-rows="true" horizontal-align="center">
+                    <lightning-layout-item multiple-rows="false" horizontal-align="center" size="12">
+                        <lightning-combobox label="Tipo"
+                            options={tipoValues} value={tipo} data-field="tipo"
+                            ></lightning-combobox>  
+                            </lightning-layout-item>
+                    <lightning-layout-item multiple-rows="false" horizontal-align="center" size="12">
+
+                        <lightning-combobox label="Tipo de Conta"
+                            options={tipoContaValues} value={tipoConta} data-field="tipoConta"
+                            ></lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item multiple-rows="false" horizontal-align="center" size="12">
+                        <lightning-input label="Nome" value={nome} data-field="nome" onchange={handleChange} class="slds-m-bottom_x-small" required></lightning-input>
+                        </lightning-layout-item>
+                    <lightning-layout-item multiple-rows="false" horizontal-align="center" size="12">
+                        <lightning-input label="Numero da conta" value={numeroConta} data-field="numeroConta" onchange={handleChange} class="slds-m-bottom_x-small" required></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item multiple-rows="false" horizontal-align="center" size="12">
+                        <lightning-button label="Atualiza conta" variant="brand" onclick={updateAccount}></lightning-button>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
 </template>

@@ -72,4 +72,11 @@ public with sharing class AccountBO {
             }
         }
     }
+
+    static void sanitizateAccount(List<Account> accountToInactive){
+        for(Account acc : accountToInactive){
+            acc.Inativa__c = true;
+        }
+        update accountToInactive;
+    }
 }

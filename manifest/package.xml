@@ -11,6 +11,7 @@
 	</types>
 	<types>
 		<members>Account.Tipo_Conta__c</members>
+		<members>Account.Inativa__c</members>
 		<name>CustomField</name>	
 	</types>
 	<version>55.0</version>

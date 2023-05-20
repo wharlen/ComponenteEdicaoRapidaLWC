@@ -3,6 +3,9 @@
 	<types>
 		<members>AccountBO</members>
 		<members>Util</members>
+		<members>InactiveAccountsSanitizationBatchable</members>
+		<members>InactiveAccountsSanitizationBatTest</members>
+		<members>AccountSanitizateSchedule</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -20,6 +23,10 @@
 		<members>Conta_P_gina_de_registro1</members>
 		<members>Conta_P_gina_de_registro2</members>
 		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>edicaoCamposCliente</members>
+		<name>LightningComponentBundle</name>
 	</types>
 	<version>55.0</version>
 </Package>

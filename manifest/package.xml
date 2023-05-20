@@ -3,16 +3,23 @@
 	<types>
 		<members>AccountBO</members>
 		<members>Util</members>
-		<name>ApexClass</name>	
+		<name>ApexClass</name>
 	</types>
 	<types>
 		<members>AccountTrigger</members>
-		<name>ApexTrigger</name>	
+		<name>ApexTrigger</name>
 	</types>
 	<types>
-		<members>Account.Tipo_Conta__c</members>
 		<members>Account.Inativa__c</members>
-		<name>CustomField</name>	
+		<members>Account.Tipo_Conta__c</members>
+		<members>Opportunity.Data_Negociacao__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Conta_P_gina_de_registro</members>
+		<members>Conta_P_gina_de_registro1</members>
+		<members>Conta_P_gina_de_registro2</members>
+		<name>FlexiPage</name>
 	</types>
 	<version>55.0</version>
 </Package>

@@ -82,58 +82,39 @@ export default class EdicaoCamposCliente extends LightningElement {
 
     updateAccount(event) {
         this.isLoading = true;
-        console.log('tetsetsets')
-        console.log(this.account.data.Id)
-        console.log(this.recordId)
-        /*const allValid = [...this.template.querySelectorAll('lightning-input')]
-            .reduce((validSoFar, inputFields) => {
-                inputFields.reportValidity();
-                return validSoFar && inputFields.checkValidity();
-            }, true);*/
 
-       //if (allValid) {
-            const fields = {};
-            fields[IDCONTA.fieldApiName] = this.recordId;
-            fields[TIPO.fieldApiName] = this.template.querySelector("[data-field='tipo']").value;
-            fields[TIPOCONTA.fieldApiName] = this.template.querySelector("[data-field='tipoConta']").value;
-            fields[NOME.fieldApiName] = this.template.querySelector("[data-field='nome']").value;
-            fields[NUMEROCONTA.fieldApiName] = this.template.querySelector("[data-field='numeroConta']").value;
-            console.log(fields)
+        const fields = {};
+        fields[IDCONTA.fieldApiName] = this.recordId;
+        fields[TIPO.fieldApiName] = this.template.querySelector("[data-field='tipo']").value;
+        fields[TIPOCONTA.fieldApiName] = this.template.querySelector("[data-field='tipoConta']").value;
+        fields[NOME.fieldApiName] = this.template.querySelector("[data-field='nome']").value;
+        fields[NUMEROCONTA.fieldApiName] = this.template.querySelector("[data-field='numeroConta']").value;
+        console.log(fields)
 
-            const recordInput = { fields };
-            console.log(recordInput)
-            updateRecord(recordInput)
-                .then(() => {
-                    this.dispatchEvent(
-                        new ShowToastEvent({
-                            title: 'Successo',
-                            message: 'Conta atualizada com sucesso ',
-                            variant: 'success'
-                        })
-                    );
-                    return refreshApex(this.account);
-                })
-                .catch(error => {
-                    this.dispatchEvent(
-                        new ShowToastEvent({
-                            title: 'Erro ao criar registro',
-                            message: error.body.message,
-                            variant: 'error'
-                        })
-                    );
-                }).finally(()=>{
-                    this.isLoading = false;
-                });
-           /*}
-        else {
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: 'Algo de errado aconteceu',
-                    message: 'Verifique os dados e tente novamente.',
-                    variant: 'error'
-                })
-             );
-        }*/
+        const recordInput = { fields };
+        console.log(recordInput)
+        updateRecord(recordInput)
+            .then(() => {
+                this.dispatchEvent(
+                    new ShowToastEvent({
+                        title: 'Successo',
+                        message: 'Conta atualizada com sucesso ',
+                        variant: 'success'
+                    })
+                );
+                return refreshApex(this.account);
+            })
+            .catch(error => {
+                this.dispatchEvent(
+                    new ShowToastEvent({
+                        title: 'Erro ao criar registro',
+                        message: error.body.message,
+                        variant: 'error'
+                    })
+                );
+            }).finally(()=>{
+                this.isLoading = false;
+            });
     }
 
 }

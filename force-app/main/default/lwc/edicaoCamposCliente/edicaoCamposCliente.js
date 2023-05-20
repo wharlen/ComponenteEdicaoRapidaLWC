@@ -1,5 +1,7 @@
 import { LightningElement, api, wire, track} from 'lwc';
 import { getRecord, getFieldValue, updateRecord } from 'lightning/uiRecordApi';
+import { ShowToastEvent } from "lightning/platformShowToastEvent";
+
 //getPicklistValues para retornar os valores das picklists
 //getObjectInfo para retornar o parametro obrigatório do getPicklistValues que é o recordTypeId
 import {  getObjectInfo } from 'lightning/uiObjectInfoApi'
@@ -94,7 +96,8 @@ export default class EdicaoCamposCliente extends LightningElement {
         const recordInput = { fields };
         console.log(recordInput)
         updateRecord(recordInput)
-            .then(() => {
+            .then((res) => {
+                console.log(res)
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Successo',
@@ -105,10 +108,13 @@ export default class EdicaoCamposCliente extends LightningElement {
                 return refreshApex(this.account);
             })
             .catch(error => {
+                console.log(error.body)
+                console.log(error.body.output.errors[0].message)
+
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Erro ao criar registro',
-                        message: error.body.message,
+                        message: 'Ocorreu um erro:\n'+error.body.output.errors[0].message,
                         variant: 'error'
                     })
                 );

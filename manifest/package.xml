@@ -3,6 +3,7 @@
 	<types>
 		<members>AccountBO</members>
 		<members>Util</members>
+		<members>AccountTriggerTest</members>
 		<members>InactiveAccountsSanitizationBatchable</members>
 		<members>InactiveAccountsSanitizationBatTest</members>
 		<members>AccountSanitizateSchedule</members>

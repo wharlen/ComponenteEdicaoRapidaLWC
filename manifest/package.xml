@@ -2,11 +2,11 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>AccountBO</members>
-		<members>Util</members>
-		<members>AccountTriggerTest</members>
-		<members>InactiveAccountsSanitizationBatchable</members>
-		<members>InactiveAccountsSanitizationBatTest</members>
 		<members>AccountSanitizateSchedule</members>
+		<members>AccountTriggerTest</members>
+		<members>InactiveAccountsSanitizationBatTest</members>
+		<members>InactiveAccountsSanitizationBatchable</members>
+		<members>Util</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -25,6 +25,10 @@
 		<members>Conta_P_gina_de_registro1</members>
 		<members>Conta_P_gina_de_registro2</members>
 		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Account-Account Layout</members>
+		<name>Layout</name>
 	</types>
 	<types>
 		<members>edicaoCamposCliente</members>

@@ -22,7 +22,7 @@ public with sharing class AccountBO {
     public static void trataTipoParceiro(List<Account> newAccounts){
         List<Account> accToInsertOpp = new List<Account>();
         for(Account acc : newAccounts){
-            if(acc.Type == 'Parceiro'){
+            if(acc.Type == 'Channel Partner / Reseller'){
                 accToInsertOpp.add(acc);
             }
         }
@@ -49,7 +49,7 @@ public with sharing class AccountBO {
     public static void trataTipoConsumidorFinal(List<Account> newAccounts){
         List<Account> accToInsertTask = new List<Account>();
         for(Account acc : newAccounts){
-            if(acc.Type == 'Consumidor Final'){
+            if(acc.Type == 'Customer - Direct'){
                 accToInsertTask.add(acc);
             }
         }

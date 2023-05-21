@@ -48,16 +48,16 @@ public class AccountTriggerTest {
     @isTest
     static void test_trataTipoParceiro() {
         List<Account> lstAcc = new List<Account>();
-        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-945', Tipo_Conta__c = 'CNPJ', Type='Parceiro'));
-        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-98', Tipo_Conta__c = 'CNPJ', Type='Parceiro'));
+        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-945', Tipo_Conta__c = 'CNPJ', Type='Channel Partner / Reseller'));
+        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-98', Tipo_Conta__c = 'CNPJ', Type='Channel Partner / Reseller'));
         AccountBO.trataTipoParceiro(lstAcc);
     }
 
     @isTest
     static void test_trataTipoConsumidorFinal() {
         List<Account> lstAcc = new List<Account>();
-        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-94', Tipo_Conta__c = 'CNPJ', Type='Consumidor Final'));
-        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-98', Tipo_Conta__c = 'CNPJ', Type='Consumidor Final'));
+        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-94', Tipo_Conta__c = 'CNPJ', Type='Customer - Direct'));
+        lstAcc.add(new Account(Name='Test1', AccountNumber= '39.905.173/0001-98', Tipo_Conta__c = 'CNPJ', Type='Customer - Direct'));
         AccountBO.trataTipoConsumidorFinal(lstAcc);
     }
 }

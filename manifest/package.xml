@@ -34,5 +34,9 @@
 		<members>edicaoCamposCliente</members>
 		<name>LightningComponentBundle</name>
 	</types>
+	<types>
+		<members>*</members>
+		<name>StandardValueSetTranslation</name>
+	</types>
 	<version>55.0</version>
 </Package>

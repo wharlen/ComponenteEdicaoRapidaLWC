@@ -15,7 +15,8 @@
 	<types>
 		<members>Account.Inativa__c</members>
 		<members>Account.Tipo_Conta__c</members>
-		<members>Opportunity.Data_Negociacao__c</members>
+		<members>Account.Type</members>
+		<members>Opportunity.Data_Ganha__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>

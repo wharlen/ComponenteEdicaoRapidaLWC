@@ -26,8 +26,8 @@ export default class EdicaoCamposCliente extends LightningElement {
         {'label':'CPF', 'value':'CPF'}
     ];
     @api tipoValues = [
-        {'label':'Parceiro', 'value':'Channel Partner / Reseller'},
-        {'label':'Consumidor Final', 'value':'Customer - Direct'}
+        {'label':'Parceiro', 'value':'Parceiro'},
+        {'label':'Consumidor Final', 'value':'Consumidor Final'}
     ];
     @api RECORDTYPE;
 
